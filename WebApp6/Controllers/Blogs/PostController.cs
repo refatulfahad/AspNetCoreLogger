@@ -13,7 +13,7 @@ namespace WebApp6.Controllers
 {
     [AllowAnonymous]
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/post")]
     public class PostController : GenericBaseController<PostEntity, PostModel>
     {
         private readonly IPostService _postService;

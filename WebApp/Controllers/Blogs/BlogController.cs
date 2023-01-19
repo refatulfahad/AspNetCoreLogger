@@ -19,7 +19,7 @@ namespace WebApp.Controllers
 {
     [AllowAnonymous]
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/blog")]
     [Produces("application/json")]
     public class BlogController : GenericBaseController<BlogEntity, BlogModel>
     {
@@ -53,7 +53,7 @@ namespace WebApp.Controllers
             return new OkResponse(res);
         }
 
-        [HttpPut("{blogId}")]
+        [HttpPut("{blog-id}")]
         public async Task<IActionResult> UpdateBlogDetailAsync(long blogId, [FromForm] BlogModel model)
         {
             var res = await _blogService.UpdateBlogDetailAsync(blogId, model);
@@ -61,7 +61,7 @@ namespace WebApp.Controllers
             return new OkResponse(res);
         }
 
-        [HttpPost("BulkBlog")]
+        [HttpPost("bulk-blog")]
         public async Task<IActionResult> BulkBlogAsync(List<BlogBulkModel> blogs)
         {
             var res = await _blogService.AddBulkBlogAsync(blogs);
@@ -69,14 +69,14 @@ namespace WebApp.Controllers
             return new OkResponse(res);
         }
 
-        [HttpPost("BlogOperation")]
+        [HttpPost("blog-operation")]
         public async Task BlogOperationAsync()
         {
             await _blogService.AddBlogOperationAsync();
 
         }
 
-        [HttpPost("AddDummyBlogs/{amount}")]
+        [HttpPost("add-dummy-blogs/{amount}")]
         public async Task<IActionResult> AddDummyBlogDetailAsync(int amount)
         {
             for (int i = 0; i < amount; i++)

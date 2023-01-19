@@ -11,7 +11,7 @@ namespace WebApp7.Controllers
 {
     [AllowAnonymous]
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/exception")]
     [Produces("application/json")]
     public class ExceptionController
     {

@@ -9,7 +9,7 @@ using WebApp7.ViewModels;
 namespace WebApp7.Controllers.Auths
 {
     [AllowAnonymous]
-    [Route("api/[controller]")]
+    [Route("api/token")]
     [ApiController]
     public class TokenController : ControllerBase
     {

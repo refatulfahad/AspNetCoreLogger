@@ -13,7 +13,7 @@ namespace WebApp.Controllers.Auths
     /// <summary>
     /// Account controller with user activity
     /// </summary>
-    [Route("api/[controller]")]
+    [Route("api/account")]
     [ApiController]
     public class AccountController : ControllerBase
     {

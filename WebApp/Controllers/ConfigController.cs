@@ -12,7 +12,7 @@ namespace WebApp.Controllers
 {
     //[ApiExplorerSettings(IgnoreApi = true)]
     [ApiController]
-    [Route("c/[controller]")]
+    [Route("c/config")]
     public class ConfigController : ControllerBase
     {
         private readonly IConfiguration Configuration;

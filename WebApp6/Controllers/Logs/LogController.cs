@@ -13,7 +13,7 @@ using WebApp.Logger.Providers.Sqls;
 namespace WebApp6.Controllers.Logs
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/log")]
     public class LogController : ControllerBase
     {
         private readonly IRouteLogRepository _routeLogRepository;
